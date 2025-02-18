@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="block-model.css" />
+    <title>Bir Elemanın Blok (Kutu) Modeli</title>
+  </head>
+  <body>
+    <h1>Bir Elemanın Blok (Kutu) Modeli</h1>
+
+    <!-- Introduction Section -->
+    <div class="section">
+      <h2>Giriş</h2>
+      <div class="description">
+        HTML ve CSS’de bir elemanın kutu modeli; içerik (content), iç boşluk (padding), kenarlık (border) ve dış boşluk (margin) alanlarını kapsar.
+      </div>
+    </div>
+
+    <!-- Block Model Explanation -->
+    <div class="section">
+      <h2>Blok Modeli Nedir? (Kutu Modeli Tanımı)</h2>
+      <div class="description">
+        Bir elemanın genişlik ve yüksekliğini belirleyen düzen kuralıdır. Aşağıdaki unsurlar vardır:
+        <ul>
+          <li><strong>Content:</strong> Asıl eleman içeriği. (Örn: metin, resim)</li>
+          <li><strong>Padding:</strong> İçerik ile kenarlık arasındaki boşluk.</li>
+          <li><strong>Border:</strong> Elemanın etrafını saran çizgi.</li>
+          <li><strong>Margin:</strong> Eleman ile çevresindeki diğer öğeler arasındaki boşluk.</li>
+        </ul>
+      </div>
+      <div class="code-sample">
+        /* Örnek: Content-box varsayılan davranış */
+/* Not: width yalnızca içerik alanını belirler */
+.box {
+  width: 150px;
+  padding: 30px;  /* içerikle border arasındaki boşluk */
+  border: 5px solid red;
+  margin: 20px;
+}
+      </div>
+      <!-- Live example: content-box demo -->
+      <div class="live-example blobox content-box-demo">
+        <p>Content<br>&nbsp;</p>
+      </div>
+    </div>
+
+    <!-- Padding, Border & Margin Detayları -->
+    <div class="section">
+      <h2>Özelliklerin Detayları</h2>
+      <div class="description">
+        <p>
+          <strong>Padding:</strong> Elemanın içeriği ile kenarlığı arasındaki boşluğu belirler.
+          Örneğin, <code>padding: 20px;</code> elemanın tüm kenarlarında 20px boşluk oluşturur.
+        </p>
+        <p>
+          <strong>Border:</strong> Elemanın kenarlığını oluşturur. Örneğin, <code>border: 2px dashed #333;</code> kenarlık ekler.
+        </p>
+        <p>
+          <strong>Margin:</strong> Elemanın dışındaki boşluğu ayarlar. Varsayılan tarayıcı değerleri genellikle paragraflarda ve başlıklarda
+          ek boşluk bırakır.
+        </p>
+      </div>
+      <div class="code-sample">
+        /* Varsayılan tarayıcı değerleri örneği */
+/* h1, p gibi öğelerde genellikle margin eklenmiştir */
+h1 { margin: 0.67em 0; }
+p { margin: 1em 0; }
+      </div>
+      <!-- Live example: padding, border, margin demo -->
+      <div class="live-example blobox demo-usage">
+        <p style="margin:20px; padding:20px; border:2px solid #333;">Deneme Örneği</p>
+      </div>
+    </div>
+
+    <!-- Alternatif Kullanımlar -->
+    <div class="section">
+      <h2>Alternatif Kullanımlar: border-box</h2>
+      <div class="description">
+        Eğer <code>box-sizing: border-box;</code> kullanırsanız, width ve height tüm elemanı kapsar; padding ve border hesaplama dışında kalır.
+      </div>
+      <div class="code-sample">
+        /* Border-box örneği */
+.box {
+  box-sizing: border-box;
+  width: 150px;
+  padding: 30px;
+  border: 5px solid red;
+  margin: 20px;
+}
+      </div>
+      <!-- Live example: border-box demo -->
+      <div class="live-example blobox border-box-demo">
+        <p>Border-box<br>&nbsp;</p>
+      </div>
+    </div>
+
+    <!-- Box-Sizing Global Ayarı -->
+    <div class="section">
+      <h2>Box-Sizing Özelliği</h2>
+      <div class="code-sample">
+        /* Global ayar */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+      </div>
+    </div>
+
+    <!-- Padding & Margin Kısım Sonuçları -->
+    <div class="section">
+      <h2>Padding & Margin Kullanımı</h2>
+      <div class="description">
+        Padding ve margin özelliği kullanılırken, kendi değerlerinizi belirleyebilirsiniz.
+        Fakat unutmayın, tarayıcıların varsayılan stil sayfalarında bu değerlere otomatik eklemeler olabilir.
+      </div>
+      <div class="code-sample">
+        /* Örnek: padding: 10px 20px; margin: 0 0 15px 0; */
+      </div>
+    </div>
+
+    <!-- Object-Fit for Images -->
+    <div class="section">
+      <h2>Esnek Görüntüler ve Object-Fit</h2>
+      <div class="description">
+        Görüntüler, kapsayıcılarının genişliğine göre ayarlanır. object-fit:
+        cover; oranları korur.
+      </div>
+      <div class="code-sample">
+        /* Görüntü esnekliği için */ img { display: block; max-width: 100%;
+        object-fit: cover; }
+      </div>
+    </div>
+
+    <!-- Display Özelliği -->
+    <div class="section">
+      <h2>Display Özelliği ve Öğelerin Türleri</h2>
+      <p>
+        Block, inline ve inline-block öğeler farklı davranışlar sergiler.
+        Örneğin, inline öğelere width veya height uygulanmaz.
+      </p>
+    </div>
+  </body>
+</html>

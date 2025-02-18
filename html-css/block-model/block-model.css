@@ -1,0 +1,120 @@
+/* Reset ve temel stiller */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #212121;
+  font-size: 14px;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Başlık stilleri */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Updated heading styles for clarity */
+h1 {
+  font-size: 2.4em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Liste sıfırlama */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Container/Secton stilleri */
+.section {
+  background-color: #f9f9f9;
+  margin-bottom: 40px;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Bilgi blokları */
+.description {
+  background-color: #e8f4fd;
+  padding: 15px;
+  margin: 15px 0;
+  border-left: 4px solid #3498db;
+  border-radius: 4px;
+}
+
+.example-title {
+  background-color: #edf0f3;
+  padding: 10px;
+  margin: 15px 0 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.code-sample {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  font-family: monospace;
+  font-size: 0.95em;
+  border-radius: 4px;
+}
+
+/* Görüntülerin esnek olması */
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Container örneği */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Live example styling */
+.live-example {
+  border: 2px dashed #888;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  font-family: monospace;
+}
+
+/* Blobox for box model demos */
+.blobox, .blobox {  /* Use one class name consistently */
+  /* Demonstration box to visually show content, padding, border, and margin */
+  width: 150px;
+  margin: 20px auto;
+  padding: 30px;
+  border: 5px solid red;
+}
+
+/* Content-box demo uses default (content-box) */
+.content-box-demo {
+  background-color: #ffeb3b;
+}
+
+/* Border-box demo: alternative usage */
+.border-box-demo {
+  background-color: #c8e6c9;
+  box-sizing: border-box;
+}
