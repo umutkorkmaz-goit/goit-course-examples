@@ -1,5 +1,5 @@
 * {
-    
+    font-family: "Atkinson Hyperlegible Next", serif;
 }
 
 a {
@@ -7,20 +7,36 @@ a {
     color: black;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: linear-gradient(30deg,  rgb(249, 250, 251) 0%, rgb(210, 214, 219) 100%);
 }
 
+.container {
+    width: 1408px;
+    background-color: #FFF;
+    border-radius: 6px;
+    height: auto;
+    margin: 0 auto;
+}
+
 header {
-    width: 1440px;
+    width: 1408px;
     height: 84px;
     margin: 0 auto;
     display: flex;
+    padding-top: 10px;
+    box-sizing: border-box;
 }
 
-header img.logo {
+header .logo {
     width: 294px;
     height: 84px;
+    padding: 10px;
 }
 /* Header menu styles */
 header nav.menu {
@@ -28,21 +44,27 @@ header nav.menu {
 }
 
 header nav.menu ul {
+    display: flex;  
+    gap: 30px;
+    margin: 20px;
 }
 
 header nav.menu ul li {
-    display: inline-block;
     list-style: none;
 }
 
-/* Header Button Styles */
+header nav.menu ul li a {
+    font-size: 16px;
+}
+
+/* Header Button Styles */ 
 header .buttons {
-    width: 290px;
+    width: 345px;
     font-size: 16px;
     margin-top: 14px;
 }
 
-header .buttons a {
+.buttons a {
     width: 125px;
     height: 44px;
     padding: 10px 16px ;
@@ -50,13 +72,48 @@ header .buttons a {
     border: #E5E5E5 solid 1px;
 }
 
-header .buttons a:first-child{
+.buttons a:first-child{
     font-size: 16px;
     background-color: #e5e5e5;
 }
 
-header .buttons a:last-child{
+.buttons a:last-child{
     font-size: 16px;
     background-color: #4338CA;
     color: white;
+}
+
+
+.hero-section {
+    display: flex;
+    padding: 100px;
+    gap: 20px;
+}
+
+.hero-section .hero-section-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.hero-section .hero-section-message h1 {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 600;
+}
+.hero-section .hero-section-message p {
+    font-size: 20px;
+    line-height: 28px;
+    color: #525252;
+    margin-top: 24px;
+}
+.hero-section .hero-section-message .buttons {
+    margin-top: 64px;
+}
+.hero-section .hero-section-message .buttons a{
+    padding: 16px 24px;
+}
+.hero-section .hero-section-message .buttons a:last-child {
+    margin-left: 20px;
 }
